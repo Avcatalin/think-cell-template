@@ -28,7 +28,8 @@ This will start a local development server and open the project in your default 
 
 # 2. PREREQUISITES
 
-- Any modern web browser (e.g., Google Chrome, Firefox, Edge, Safari).
+- Node.js: Ensure you have Node.js installed to use npm.
+- Any modern web browser: (e.g., Google Chrome, Firefox, Edge, Safari).
 
 # 3. FILE STRUCURE
 
