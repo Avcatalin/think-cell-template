@@ -37,19 +37,19 @@ This will start a local development server and open the project in your default 
 
 Think-cell template
 
-├── index.html # Main HTML file
-├── css/
-│ ├── main.css # Source CSS file for Tailwind directives
-│ ├── output.css # Generated and minified Tailwind CSS file
-├── js/
-│ ├── main.js # Custom JavaScript for interactivity
-├── assets/
-│ ├── [images] # Folder containing all images used in the template
-│ ├── icons/ # Folder containing icon files
-├── package.json # Manages project dependencies and scripts
-├── package-lock.json # Locks exact versions of installed dependencies
-├── tailwind.config.js # Tailwind CSS configuration file
-└── README.md # Project documentation
+── index.html # Main HTML file
+── css/
+--- main.css # Source CSS file for Tailwind directives
+--- output.css # Generated and minified Tailwind CSS file
+-- js/
+--- main.js # Custom JavaScript for interactivity
+-- assets/
+--- [images] # Folder containing all images used in the template
+--- icons/ # Folder containing icon files
+-- package.json # Manages project dependencies and scripts
+-- package-lock.json # Locks exact versions of installed dependencies
+-- tailwind.config.js # Tailwind CSS configuration file
+-- README.md # Project documentation
 
 # 4. IMAGE AND ICON FORMATS
 
