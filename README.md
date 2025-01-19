@@ -14,6 +14,8 @@ Use "cd think-cell-template" to navigate to the project directory.
 
 ## Install dependencies:
 
+Node.js: Ensure you have Node.js installed to use npm.
+
 Use "npm install" to install dependencies.
 
 ## Install live-server for a local development server:
