@@ -6,7 +6,7 @@ A simple template showcasing a custom HTML template styled with Tailwind CSS and
 
 ## Clone the repository:
 
-Use "git clone <repository-url>" or use GitHub desktop app.
+Use "git clone [repository-url]" or use GitHub desktop app.
 
 ## Navigate to the project directory:
 
