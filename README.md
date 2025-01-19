@@ -11,6 +11,7 @@ Open terminal window in the location where you want to clone the project. Use "g
 ## Navigate to the project directory:
 
 Use "cd think-cell-template" to navigate to the project directory.
+Open project in your favorite code editor.
 
 ## Install dependencies:
 
