@@ -4,16 +4,39 @@ A simple template showcasing a custom HTML template styled with Tailwind CSS and
 
 # 1. GETTING STARTED
 
-This project is self-contained and does not require any additional setup to view it. Simply open the index.html file in your browser to see it in action.
+## Clone the repository:
+
+Use "git clone <repository-url>" or use GitHub desktop app.
+
+## Navigate to the project directory:
+
+Use "cd think-cell-template" to navigate to the project directory.
+
+## Install dependencies:
+
+Node.js: Ensure you have Node.js installed to use npm.
+
+Use "npm install" to install dependencies.
+
+## Install live-server for a local development server:
+
+Use "npm install live-server --save-dev" to run the project locally.
+
+## Start the project:
+
+Use "npm start" to run the project.
+
+This will start a local development server and open the project in your default browser. The live-server will also enable live reload whenever changes are made to your files.
 
 # 2. PREREQUISITES
 
-- Any modern web browser (e.g., Google Chrome, Firefox, Edge, Safari).
+- Node.js: Ensure you have Node.js installed to use npm.
+- Any modern web browser: (e.g., Google Chrome, Firefox, Edge, Safari).
 
 # 3. FILE STRUCURE
 
-Think-cell template
-
+```
+Think-cell template/
 ├── index.html # Main HTML file
 ├── css/
 │ ├── main.css # Source CSS file for Tailwind directives
@@ -23,8 +46,11 @@ Think-cell template
 ├── assets/
 │ ├── [images] # Folder containing all images used in the template
 │ ├── icons/ # Folder containing icon files
+├── package.json # Manages project dependencies and scripts
+├── package-lock.json # Locks exact versions of installed dependencies
 ├── tailwind.config.js # Tailwind CSS configuration file
 └── README.md # Project documentation
+```
 
 # 4. IMAGE AND ICON FORMATS
 
@@ -78,7 +104,7 @@ These were tailored for specific uses based on the Figma design.
 
 To view the project:
 
--- Navigate to the project directory.
--- Open the index.html file in a web browser.
+- Navigate to the project directory.
+- Run the project using [npm start].
 
 For mobile preview you can view the project at https://think-cell-project.duoadv.ro/
