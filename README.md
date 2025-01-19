@@ -35,6 +35,7 @@ This will start a local development server and open the project in your default 
 
 # 3. FILE STRUCURE
 
+```
 Think-cell template/
 ├── index.html # Main HTML file
 ├── css/
@@ -49,6 +50,7 @@ Think-cell template/
 ├── package-lock.json # Locks exact versions of installed dependencies
 ├── tailwind.config.js # Tailwind CSS configuration file
 └── README.md # Project documentation
+```
 
 # 4. IMAGE AND ICON FORMATS
 
