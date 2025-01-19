@@ -6,7 +6,7 @@ A simple template showcasing a custom HTML template styled with Tailwind CSS and
 
 ## Clone the repository:
 
-Use "git clone [repository-url]" or use GitHub desktop app.
+Open terminal window in the location where you want to clone the project. Use "git clone [repository-url]" to start cloning.
 
 ## Navigate to the project directory:
 
@@ -18,9 +18,9 @@ Node.js: Ensure you have Node.js installed to use npm.
 
 Use "npm install" to install dependencies.
 
-## Install live-server for a local development server:
+## Install lite-server for a local development server:
 
-Use "npm install live-server --save-dev" to run the project locally.
+Use "npm install lite-server --save-dev" to run the project locally.
 
 ## Start the project:
 
