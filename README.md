@@ -104,7 +104,7 @@ These were tailored for specific uses based on the Figma design.
 
 To view the project:
 
--- Navigate to the project directory.
--- Run the project using [npm start].
+- Navigate to the project directory.
+- Run the project using [npm start].
 
 For mobile preview you can view the project at https://think-cell-project.duoadv.ro/
