@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+@layer base {
+  body {
+    @apply font-jost;
+  }
+}
+::selection {
+  @apply bg-green-850;
+}

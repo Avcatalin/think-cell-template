@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think-cell Project</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- begin Header -->
+    <header class="mb-8 lg:mb-14">
+      <div class="container">
+        <!-- Top navigation -->
+        <div
+          class="flex items-center justify-between px-5 lg:px-8 py-3 my-3 lg:my-8"
+        >
+          <a href="/" aria-label="Think-Cell homepage">
+            <img
+              src="./assets/think-cell-logo.svg"
+              alt="Think-Cell logo"
+              class="max-w-32 lg:max-w-40"
+              loading="lazy"
+            />
+          </a>
+          <!-- Language / Search / Register -->
+          <nav aria-label="Top utility navigation">
+            <ul class="flex items-center gap-x-4 list-none md:gap-x-8">
+              <!-- Language switcher -->
+              <li class="relative group hover:text-green-850">
+                <!-- Dropdown Trigger -->
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center gap-x-1 lg:gap-x-2 transition-all duration-300 ease-in-out"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="language-dropdown"
+                  id="languageTrigger"
+                >
+                  <img
+                    src="./assets/icons/language-icon.svg"
+                    alt="Language selector icon"
+                    loading="lazy"
+                  />
+                  <div class="flex items-center">
+                    <span
+                      class="hidden md:block font-medium text-lg xl:text-xl tracking-small"
+                      id="currentLanguage"
+                      >Deutsch</span
+                    >
+                    <img
+                      src="./assets/icons/arrow-down.svg"
+                      alt="Arrow icon"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </a>
+
+                <!-- Dropdown Menu -->
+                <nav
+                  class="absolute top-full right-0 left-auto mt-0 w-32 z-20 rounded-md shadow-lg bg-white ring-1 ring-slate-1000 ring-opacity-5 hidden group-hover:block"
+                  id="language-dropdown"
+                  role="menu"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="block px-4 py-2 text-sm text-slate-1000 hover:bg-neutral-150 hover:text-green-850"
+                        role="menuitem"
+                        data-language="English"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="block px-4 py-2 text-sm text-slate-1000 hover:bg-neutral-150 hover:text-green-850"
+                        role="menuitem"
+                        data-language="Deutsch"
+                        >Deutsch</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </li>
+
+              <!-- Search trigger -->
+              <li
+                class="relative before:content-[''] before:absolute before:-left-2 md:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+              >
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center gap-x-0 md:gap-x-2"
+                  aria-label="Search"
+                  id="search-trigger"
+                >
+                  <img
+                    src="./assets/icons/search-icon.svg"
+                    alt="Search icon"
+                    loading="lazy"
+                  />
+                  <span
+                    class="hidden md:block font-medium text-lg xl:text-xl tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                    >Suche</span
+                  >
+                  <span
+                    class="hidden md:flex lg:items-center gap-x-0.5 p-1 bg-[#D2D6DC] rounded"
+                  >
+                    <img
+                      src="./assets/icons/icon-command.svg"
+                      alt="Command key icon"
+                      loading="lazy"
+                    />
+                    <span class="text-[10px] font-bold">K</span>
+                  </span>
+                </a>
+                <form
+                  action="/search"
+                  method="GET"
+                  class="absolute -top-1 right-0 w-32 sm:w-44 md:w-60 transition-all duration-300 ease-in-out opacity-0 invisible"
+                  id="search-form"
+                >
+                  <!-- Search Input -->
+                  <input
+                    type="text"
+                    name="search"
+                    placeholder="Suche..."
+                    class="w-full pl-2 pr-4 py-1 border border-gray-300 rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:border-green-850 focus:ring-green-850"
+                    aria-label="Search"
+                  />
+                  <!-- Close Button -->
+                  <button
+                    type="button"
+                    id="closeFormButton"
+                    class="absolute text-xs right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-green-850"
+                    aria-label="Close search form"
+                  >
+                    ✕
+                  </button>
+                </form>
+              </li>
+
+              <!-- Register cta -->
+              <li
+                class="relative before:content-[''] before:absolute before:-left-2 md:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+              >
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center gap-x-2 transition-all duration-300 ease-in-out hover:text-green-850"
+                >
+                  <img
+                    src="./assets/icons/register-icon.svg"
+                    alt="Register icon"
+                    aria-label="Register"
+                    loading="lazy"
+                  />
+                  <span
+                    class="hidden md:block font-medium text-lg xl:text-xl tracking-small"
+                    >Anmelden</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Main navigation -->
+        <nav
+          class="py-2 md:py-3 lg:py-4 px-5 lg:px-8 rounded-none lg:rounded-2xl bg-neutral-150"
+        >
+          <!-- Mobile Menu Toggle -->
+          <button
+            id="menuToggle"
+            class="flex ml-auto lg:hidden py-2 text-green-850 rounded-lg focus:outline-none"
+          >
+            <img
+              src="./assets/icons/menu-trigger.svg"
+              alt="Mobile menu trigger"
+              loading="lazy"
+            />
+          </button>
+
+          <ul
+            role="menu"
+            class="absolute left-0 right-0 px-5 lg:px-0 py-3 lg:py-0 z-20 lg:z-0 lg:relative text-right lg:text-left bg-neutral-150 hidden flex-col justify-end lg:flex md:flex-row items-center gap-x-6 lg:gap-x-8"
+            id="menu"
+          >
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Produkt</a
+              >
+            </li>
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Bestellen</a
+              >
+            </li>
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Download</a
+              >
+            </li>
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Ressourcen</a
+              >
+            </li>
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Karriere</a
+              >
+            </li>
+            <li class="py-2 lg:py-0">
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Unternehmen</a
+              >
+            </li>
+            <li class="py-2 lg:py-0 ml-auto">
+              <a
+                class="inline-flex font-medium text-lg leading-6 tracking-small text-white py-3 px-4 rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
+                href="javascript:void(0);"
+                role="menuitem"
+                >Jetzt kostenlos testen</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- end Main navigation -->
+      </div>
+    </header>
+    <!-- end Header -->
+    <main>
+      <div class="container">
+        <!-- Hero banner -->
+        <section
+          class="flex flex-col md:flex-row items-center gap-y-10 lg:gap-x-6 px-5 lg:px-8 pt-0 pb-8 lg:py-14 bg-[url('/assets/video-background.png')] bg-no-repeat bg-bottom md:bg-right bg-contain lg:bg-w60 xl:bg-contain"
+        >
+          <!-- Hero banner content -->
+          <div class="w-full lg:w-1/2">
+            <h1
+              class="mb-4 font-medium text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight text-black"
+            >
+              Powerpoint-Diagramme. Wie sie sein sollten.
+            </h1>
+            <p
+              class="mb-4 lg:mb-6 xl:mb-8 text-base md:text-lg lg:text-xl xl:text-2xl font-normal leading-6 lg:leading-8 xl:leading-9 text-black tracking-small"
+            >
+              Mit think-cell erstellen Sie beeindruckende Diagramme in wenigen
+              Minuten, verbessern Ihr Folien-Layout und automatisieren Ihre
+              regelmäßigen Berichte.
+            </p>
+            <a
+              href="javascript:void(0);"
+              class="inline-flex py-3 lg:py-4 px-5 lg:px-8 text-base md:text-lg lg:text-2xl font-medium text-white rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
+              >Jetzt kostenlos testen</a
+            >
+          </div>
+          <!-- end Hero banner content -->
+          <!-- Hero banner video modal -->
+          <div class="w-full lg:w-1/2">
+            <div class="relative flex items-center justify-center">
+              <img
+                src="./assets/app-screen-hero-banner.png"
+                alt="Think-Cell application screen showing diagrams"
+                class="mr-0 lg:-mr-10"
+                loading="lazy"
+              />
+              <a
+                href="javascript:void(0);"
+                id="videoButton"
+                aria-label="Play video"
+                class="absolute inset-auto ml-0 lg:ml-10 z-10"
+              >
+                <img
+                  src="assets/icons/play-button.svg"
+                  alt="Play video button"
+                  loading="lazy"
+                  class="w-20 md:w-24 lg:w-28 xl:w-auto"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- end Hero banner video modal -->
+        </section>
+        <!-- end Hero banner -->
+      </div>
+    </main>
+
+    <!-- Modal card -->
+    <div
+      id="videoModal"
+      class="flex items-center justify-center fixed top-0 left-0 right-0 bottom-0 px-6 lg:px-0 inset-0 z-50 bg-black bg-opacity-85 opacity-0 invisible transition-all duration-300 ease"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="relative w-full lg:max-w-4xl p-2 lg:p-5 bg-white rounded-lg shadow-lg"
+      >
+        <!-- Video -->
+        <div class="relative overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/SX6vGFLghJo"
+            title="YouTube video player"
+            class="w-full h-64 sm:h-96 rounded-lg"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- Close Button -->
+        <button
+          class="absolute -top-5 -right-5 flex items-center justify-center p-3 w-12 h-12 rounded-full bg-green-850 text-white"
+          id="closeModalButton"
+          aria-label="Close video"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+    <!-- end Modal card -->
+    <!-- Link to scripts file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
