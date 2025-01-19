@@ -4,7 +4,27 @@ A simple template showcasing a custom HTML template styled with Tailwind CSS and
 
 # 1. GETTING STARTED
 
-This project is self-contained and does not require any additional setup to view it. Simply open the index.html file in your browser to see it in action.
+## Clone the repository:
+
+Use "git clone <repository-url>" or use GitHub desktop app.
+
+## Navigate to the project directory:
+
+Use "cd think-cell-template" to navigate to the project directory.
+
+## Install dependencies:
+
+Use "npm install" to install dependencies.
+
+## Install live-server for a local development server:
+
+Use "npm install live-server --save-dev" to run the project locally.
+
+## Start the project:
+
+Use "npm start" to run the project.
+
+This will start a local development server and open the project in your default browser. The live-server will also enable live reload whenever changes are made to your files.
 
 # 2. PREREQUISITES
 
@@ -23,6 +43,8 @@ Think-cell template
 ├── assets/
 │ ├── [images] # Folder containing all images used in the template
 │ ├── icons/ # Folder containing icon files
+├── package.json # Manages project dependencies and scripts
+├── package-lock.json # Locks exact versions of installed dependencies
 ├── tailwind.config.js # Tailwind CSS configuration file
 └── README.md # Project documentation
 
@@ -79,6 +101,6 @@ These were tailored for specific uses based on the Figma design.
 To view the project:
 
 -- Navigate to the project directory.
--- Open the index.html file in a web browser.
+-- Run the project using [npm start].
 
 For mobile preview you can view the project at https://think-cell-project.duoadv.ro/
