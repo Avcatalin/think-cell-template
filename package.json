@@ -1,0 +1,24 @@
+{
+  "name": "think-cell-template",
+  "version": "1.0.0",
+  "description": "A simple template showcasing a custom HTML template styled with Tailwind CSS and few Javascript interactions.",
+  "homepage": "https://github.com/Avcatalin/think-cell-template#readme",
+  "bugs": {
+    "url": "https://github.com/Avcatalin/think-cell-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avcatalin/think-cell-template.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/main.css -o ./css/output.css --minify",
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
