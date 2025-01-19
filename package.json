@@ -16,9 +16,9 @@
   "main": "tailwind.config.js",
   "scripts": {
     "build:css": "tailwindcss -i ./css/main.css -o ./css/output.css --minify",
-    "start": "live-server"
+    "start": "lite-server"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "lite-server": "^2.6.1"
   }
 }
